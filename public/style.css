@@ -8,7 +8,6 @@ a{
     width: 100%;
     height: 50px;
     background: #ffffff;
-    box-shadow: 0 0 15px rgb(160, 160, 160);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,23 +32,23 @@ a{
     color: rgb(122, 118, 118);
 }
 .nav2{
+    padding-left: 20px;
     position: relative;
-    top: -20px;
     margin: 0 auto;
     width: 450px;
     height: 40px;
-    background: rgb(108, 250, 193);
-    border-radius: 50px;
+    background: rgb(255, 255, 255);
+    border-radius: 0  0 50px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all .3s ease-in-out;
-    box-shadow: 0 0 15px rgb(160, 160, 160);
+    /* box-shadow: 0 0 15px rgb(160, 160, 160); */
 
 }
-.nav2:focus-within{
+/* .nav2:focus-within{
     box-shadow: 0 0 15px 3px rgb(160, 160, 160);
-}
+} */
 .nav2 #text{
     background: transparent;
     border: none;
@@ -58,14 +57,41 @@ a{
     outline: none;
 
 }
+.nav2::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    left: -24px;
+    top: -1px;
+    border-top-right-radius: 50px;
+    box-shadow: 5px -10px 0 #fff;
+}
+.nav2::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    left: 465px;
+    z-index: -1;
+    top: -1px;
+    border-top-left-radius: 50px;
+    box-shadow: -5px -10px 0 #26c2ff;
+}
 .nav2 #btn{
-    background: #ffffff;
+    position: relative;
+    right: -1px;
+    background: #26c2ff;
+    color: #fff;
     border: none;
+    padding-right: 25px;
     font-size: 15px;
     width: 50px;
     height: 40px;
     margin: 0 !important;
-    border-radius: 50px;
+    border-radius: 0 0 50px 0 ;
     width: 100px;
     outline: none;
 
@@ -81,7 +107,8 @@ a{
     text-align: center;
     margin: 10px 20px;
     padding: 50px 10px;
-    background: linear-gradient(316deg, rgb(18 94 159) 0%, rgb(89 162 181) 53%, rgb(12 217 135) 100%);
+    border: solid 1px #ffffff52;
+    background: #ffffff1c;
     border-radius: 15px;
     color: #fff;
 }
@@ -94,17 +121,18 @@ a{
     padding: 0;
 
 }
+
 .paginationBttns li{
     cursor: pointer;
     padding: 8px;
     min-width: 20px;
     min-height: 20px;
     margin: 10px;
-    border: solid 2px rgb(108, 250, 193);
-    background: rgb(108, 250, 193);
+    border: solid 1px #ffffff52 !important;
+    background: rgb(255, 255, 255);
     border-radius: 50px;
     text-align: center;
-    color: #fff;
+    color: #838383;
 }
 .previousBttn,.nextBttn {
     padding: 8px;
@@ -113,14 +141,150 @@ a{
 .paginationActive{
     padding: 8px;
     margin: 1px;
-    background: transparent !important;
+    border: solid 1px #ffffff52 !important;
+    background: #ffffff0f !important;
     border-radius: 15px;
-    color: rgb(148, 145, 145) !important;
+    color: #fff !important;
 }
 @media (max-width: 992px) {
     .nav2{
         position:unset;
         width: auto;
     }
+    .nav2::after ,.nav2::before{
+        content: none;
+    }
 
+}
+.logful{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log{
+    background: #ffffff;
+    box-shadow: 0 0 15px rgb(160, 160, 160);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 20px;
+    width: 400px;
+}
+.log #text {
+    margin-bottom: 30px;
+    background: #f5f6f7;
+    border: none;
+    height: 30px;
+    padding: 5px 20px;
+    font-size: 15px;
+
+    outline: none;
+    border-radius: 50px;
+}
+.log * {
+    font-size: 20px;
+}
+.log #btn{
+    background: #26c2ff;
+    border: none;
+    font-size: 15px;
+    height: 40px;
+    margin: 0 !important;
+    border-radius: 50px;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    color: #fff;
+    
+}
+.modal{
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff18;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    
+}
+
+
+.modal .modalmin{
+    background: #ffffff;
+    box-shadow: 0 0 15px rgb(160, 160, 160);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+}
+.modalmin #text{
+    margin-bottom: 30px;
+    background: #f0f1f1;
+    border: none;
+    height: 30px;
+    padding: 5px 20px;
+    font-size: 15px;
+    outline: none;
+    border-radius: 50px;
+}
+.modal .modalmin div{
+    display: flex;
+    justify-content:space-around;
+}
+
+.modalmin .btnb{
+    cursor: pointer;
+    background: #26c2ff;
+    border: none;
+    width: 100px;
+    font-size: 15px;
+    height: 40px;
+    margin: 0 !important;
+    border-radius: 50px;
+    color: #fff;
+    outline: none;
+}
+.modalmin .btnr{
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    border: solid 2px #26c2ff ;
+    width: 100px;
+    font-size: 15px;
+    height: 40px;
+    margin: 0 !important;
+    border-radius: 50px;
+
+    outline: none;
+}
+.hiden{
+    visibility: hidden;
+    display: none;
+    z-index: -1000000;
+}
+.colorr{
+    color: #e2391b;
+}
+.nav div{
+    display: flex;
+}
+body{
+    /* background: white url(back.png) top right no-repeat;
+    background-size: cover; */
+    background: rgb(128,232,221);
+background: -moz-linear-gradient(right,  rgba(128,232,221,1) 0%,rgba(124,194,246,1) 18%,rgba(175,129,228,1) 40%,rgba(231,132,186,1) 60%,rgb(241 188 156) 82%,rgb(135 193 128) 100%);
+background: -webkit-linear-gradient(right,  rgba(128,232,221,1) 0%,rgba(124,194,246,1) 18%,rgba(175,129,228,1) 40%,rgba(231,132,186,1) 60%,rgb(241 188 156) 82%,rgb(135 193 128) 100%);
+background: linear-gradient(to right,  rgba(128,232,221,1) 0%,rgba(124,194,246,1) 18%,rgba(175,129,228,1) 40%,rgba(231,132,186,1) 60%,rgb(241 188 156) 82%,rgb(135 193 128) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e8dd', endColorstr='#b7f6af',GradientType=1 );
+    user-select: none;
 }
