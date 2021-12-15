@@ -9265,6 +9265,13 @@
   dependencies:
     "history" "^5.1.0"
 
+"react-vanilla-tilt@^1.0.0":
+  "integrity" "sha512-AuFFvbudpQIdzPeci9kP4p4Mo3QVIEtFVNu+iskMzNT0Efhi1fH5wzmdfMqWX8g82ypVgjAlwgdBWL9opnL2ow=="
+  "resolved" "https://registry.npmjs.org/react-vanilla-tilt/-/react-vanilla-tilt-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "vanilla-tilt" "1.4.1"
+
 "react@*", "react@^16 || ^17", "react@^17.0.2", "react@>=16.8", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
@@ -11179,6 +11186,11 @@
   dependencies:
     "spdx-correct" "^3.0.0"
     "spdx-expression-parse" "^3.0.0"
+
+"vanilla-tilt@1.4.1":
+  "integrity" "sha512-yZS4jIejmhqThLlwzJ5juPwDMk6rtf+ekADDK1lAYNiw6H2VGAJr9bt8vCp+ED5kyK6sE0sMq6mxPfV8a/NdFw=="
+  "resolved" "https://registry.npmjs.org/vanilla-tilt/-/vanilla-tilt-1.4.1.tgz"
+  "version" "1.4.1"
 
 "vary@~1.1.2":
   "integrity" "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw="

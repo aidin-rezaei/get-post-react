@@ -3,7 +3,7 @@ import Header from "./component/Header";
 import Filter from "./component/Filter";
 import JsonDate from "./MOCK_DATA.json";
 import ReactPaginate from "react-paginate";
-
+import Tilt from 'react-vanilla-tilt';
 function Site() {
   const [posts, setPosts] = useState(JsonDate.slice(0, 50))
   const [pageNumber, setPageNumber] = useState(0)
@@ -64,13 +64,13 @@ function Site() {
   const displayPost2 = asd.slice(pagesVisited, pagesVisited + postPerPage).map((post) => {
 
     return (
-      <div key={post.id} onClick={() => change123(post.id,post.title,post.body)} >
+      <Tilt key={post.id} options={{ scale: 2, max: 100 }} style={{background: "#8a8a8a2d"}}  onClick={() => change123(post.id,post.title,post.body)}>
         <h3>
           {post.title}
         </h3>
         <p>{post.body}</p>
 
-      </div>
+      </Tilt>
     )
 
   })
