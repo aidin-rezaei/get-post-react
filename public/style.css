@@ -1,44 +1,52 @@
-*{
-    margin:0;
+* {
+    margin: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.nav{
+
+.nav {
     width: 100%;
     height: 50px;
     background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 }
-.nav *{
-    padding:0 10px;
+
+.nav * {
+    padding: 0 10px;
 }
-.nav2 *{
-    padding:0 10px;
+
+.nav2 * {
+    padding: 0 10px;
 }
-.nav .nameuse{
+
+.nav .nameuse {
     color: #1baae2;
 }
-.nav .exit{
+
+.nav .exit {
     color: #ffffff;
     padding: 5px;
     background: #e2391b;
     border-radius: 5px;
 }
-.nav .resnum{
+
+.nav .resnum {
     color: rgb(122, 118, 118);
 }
-.nav2{
+
+.nav2 {
     padding-left: 20px;
     position: relative;
     margin: 0 auto;
     width: 450px;
     height: 40px;
     background: rgb(255, 255, 255);
-    border-radius: 0  0 50px 50px;
+    border-radius: 0 0 50px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,10 +54,11 @@ a{
     /* box-shadow: 0 0 15px rgb(160, 160, 160); */
 
 }
+
 /* .nav2:focus-within{
     box-shadow: 0 0 15px 3px rgb(160, 160, 160);
 } */
-.nav2 #text{
+.nav2 #text {
     background: transparent;
     border: none;
     font-size: 15px;
@@ -57,7 +66,8 @@ a{
     outline: none;
 
 }
-.nav2::before{
+
+.nav2::before {
     content: '';
     position: absolute;
     width: 30px;
@@ -68,7 +78,8 @@ a{
     border-top-right-radius: 50px;
     box-shadow: 5px -10px 0 #fff;
 }
-.nav2::after{
+
+.nav2::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -80,7 +91,8 @@ a{
     border-top-left-radius: 50px;
     box-shadow: -5px -10px 0 #26c2ff;
 }
-.nav2 #btn{
+
+.nav2 #btn {
     position: relative;
     right: -1px;
     background: #26c2ff;
@@ -91,28 +103,33 @@ a{
     width: 50px;
     height: 40px;
     margin: 0 !important;
-    border-radius: 0 0 50px 0 ;
+    border-radius: 0 0 50px 0;
     width: 100px;
     outline: none;
 
 }
-.grid{
+
+.grid {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
-.grid div{
+
+.grid div {
     width: 400px;
     text-align: center;
     margin: 10px 20px;
     padding: 50px 10px;
-    border: solid 1px #ffffff52;
-    background: #ffffff1c;
+    border: solid 1px #ffffff59;
+    background: #8a8a8a2d;
     border-radius: 15px;
     color: #fff;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
-.paginationBttns{
+
+.paginationBttns {
     margin-top: 20px;
     display: flex;
     list-style: none;
@@ -122,56 +139,63 @@ a{
 
 }
 
-.paginationBttns li{
+.paginationBttns li {
     cursor: pointer;
     padding: 8px;
     min-width: 20px;
     min-height: 20px;
     margin: 10px;
-    border: solid 1px #ffffff52 !important;
+    border: solid 1px #ffffff52;
     background: rgb(255, 255, 255);
     border-radius: 50px;
     text-align: center;
     color: #838383;
 }
-.previousBttn,.nextBttn {
+
+.previousBttn, .nextBttn {
     padding: 8px;
     margin: 1px;
 }
-.paginationActive{
+
+.paginationActive {
     padding: 8px;
     margin: 1px;
-    border: solid 1px #ffffff52 !important;
-    background: #ffffff0f !important;
+    border: solid 1px #26c2ff !important;
+    background: #26c2ff49 !important;
     border-radius: 15px;
     color: #fff !important;
 }
+
 @media (max-width: 992px) {
-    .nav2{
-        position:unset;
+    .nav2 {
+        position: unset;
         width: auto;
     }
-    .nav2::after ,.nav2::before{
+
+    .nav2::after, .nav2::before {
         content: none;
     }
 
 }
-.logful{
+
+.logful {
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.log{
+
+.log {
     background: #ffffff;
-    box-shadow: 0 0 15px rgb(160, 160, 160);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.384);
     display: flex;
     flex-direction: column;
     padding: 50px;
     border-radius: 20px;
     width: 400px;
 }
+
 .log #text {
     margin-bottom: 30px;
     background: #f5f6f7;
@@ -183,10 +207,12 @@ a{
     outline: none;
     border-radius: 50px;
 }
+
 .log * {
     font-size: 20px;
 }
-.log #btn{
+
+.log #btn {
     background: #26c2ff;
     border: none;
     font-size: 15px;
@@ -198,29 +224,30 @@ a{
     font-size: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     color: #fff;
-    
+
 }
-.modal{
+
+.modal {
     position: fixed;
     min-height: 100vh;
     width: 100%;
-    background-color: #ffffff18;
+    background-color: #8f8f8f18;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
-    
+
 }
 
 
-.modal .modalmin{
+.modal .modalmin {
     background: #ffffff;
-    box-shadow: 0 0 15px rgb(160, 160, 160);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.199);
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -228,7 +255,8 @@ a{
     border-radius: 20px;
     text-align: center;
 }
-.modalmin #text{
+
+.modalmin #text {
     margin-bottom: 30px;
     background: #f0f1f1;
     border: none;
@@ -238,12 +266,13 @@ a{
     outline: none;
     border-radius: 50px;
 }
-.modal .modalmin div{
+
+.modal .modalmin div {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
-.modalmin .btnb{
+.modalmin .btnb {
     cursor: pointer;
     background: #26c2ff;
     border: none;
@@ -255,10 +284,11 @@ a{
     color: #fff;
     outline: none;
 }
-.modalmin .btnr{
+
+.modalmin .btnr {
     cursor: pointer;
     background: rgb(255, 255, 255);
-    border: solid 2px #26c2ff ;
+    border: solid 2px #26c2ff;
     width: 100px;
     font-size: 15px;
     height: 40px;
@@ -267,24 +297,27 @@ a{
 
     outline: none;
 }
-.hiden{
+
+.hiden {
     visibility: hidden;
     display: none;
     z-index: -1000000;
 }
-.colorr{
+
+.colorr {
     color: #e2391b;
 }
-.nav div{
+
+.nav div {
     display: flex;
 }
-body{
-    /* background: white url(back.png) top right no-repeat;
-    background-size: cover; */
-    background: rgb(128,232,221);
-background: -moz-linear-gradient(right,  rgba(128,232,221,1) 0%,rgba(124,194,246,1) 18%,rgba(175,129,228,1) 40%,rgba(231,132,186,1) 60%,rgb(241 188 156) 82%,rgb(135 193 128) 100%);
-background: -webkit-linear-gradient(right,  rgba(128,232,221,1) 0%,rgba(124,194,246,1) 18%,rgba(175,129,228,1) 40%,rgba(231,132,186,1) 60%,rgb(241 188 156) 82%,rgb(135 193 128) 100%);
-background: linear-gradient(to right,  rgba(128,232,221,1) 0%,rgba(124,194,246,1) 18%,rgba(175,129,228,1) 40%,rgba(231,132,186,1) 60%,rgb(241 188 156) 82%,rgb(135 193 128) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e8dd', endColorstr='#b7f6af',GradientType=1 );
+
+body::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    background: white url(back.jpg) center center/cover no-repeat;
+    width: 100%;
+    height: 101vh;
     user-select: none;
 }
